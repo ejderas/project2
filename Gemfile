@@ -64,3 +64,5 @@ end
 
 gem 'font-awesome-rails'
 gem 'devise'
+gem "geocoder"
+gem "figaro"
