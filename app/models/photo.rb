@@ -1,10 +1,4 @@
 class Photo < ApplicationRecord
-before_action :authenticate_user!
-belongs_to :place
-
-  def create
-    @place = Place.find(params[:place_id])
-    @place.photos.create(photo_params.merge(user: current_user))
-    redirect_to place_path(@place)
-  end
+  belongs_to :place
+  mount_uploader :picture, PictureUploader
 end
