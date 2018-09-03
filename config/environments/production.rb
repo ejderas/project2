@@ -1,7 +1,7 @@
 Rails.application.configure do
 
 
-  ActionMailer: :Base.smtp.settings = {
+  ActionMailer::Base.smtp.settings = {
     address: 'smtp.sendgrid.net',
     port: '587',
     authentication: :plain,
